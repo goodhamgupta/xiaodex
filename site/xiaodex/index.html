@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16181a" />
+  <title>Xiaodex — your voice, your approval, your commands</title>
+  <meta name="description" content="Explore the CAD-validated Xiaodex companion case: a 3D-printable pocket approver built around a legacy M5StickC Plus." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2316181a'/%3E%3Cpath d='M20 18l10 10 10-10 6 6-10 10 10 10-6 6-10-10-10 10-6-6 10-10-10-10z' fill='%238b7ff0'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../product-world.css?v=5" />
+</head>
+<body class="product-world product-world--xiaodex">
+  <div id="top"></div>
+  <main id="world" aria-label="Xiaodex companion case product tour"></main>
+  <noscript>
+    <section class="product-fallback">
+      <img src="assets/mark.jpg" alt="Front view of the charcoal Xiaodex companion case showing the approve screen" />
+      <h1>Your voice. Your approval. Your commands.</h1>
+      <p>This tour needs JavaScript for scroll-controlled motion. The validated print and assembly details remain available in the CAD guide.</p>
+      <a href="../../cad/m5stickc-plus-xiaodex/README.md">Open the CAD guide</a>
+    </section>
+  </noscript>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      brand: {
+        name: 'xiaodex',
+        logo: 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2218%22 fill=%22%2325282b%22/%3E%3Cpath d=%22M20 18l10 10 10-10 6 6-10 10 10 10-6 6-10-10-10 10-6-6 10-10-10-10z%22 fill=%22%238b7ff0%22/%3E%3C/svg%3E',
+        showNameWithLogo: true,
+        ariaLabel: 'Xiaodex — back to the companion overview',
+        meta: 'COMPANION / CAD PROTOTYPE',
+        href: '../',
+      },
+      cta: {
+        label: 'CAD & build notes',
+        href: '../../cad/m5stickc-plus-xiaodex/README.md',
+      },
+      nav: false,
+      mobileVideo: false,
+      atmosphere: false,
+      hint: 'scroll to inspect',
+      diveScroll: 1.3,
+      crossfade: 0.08,
+      sections: [
+        {
+          id: 'mark',
+          label: 'Companion',
+          still: 'assets/mark.jpg',
+          clip: 'assets/vid/mark.mp4',
+          alt: 'Full front view of the charcoal Xiaodex case with lanyard loop, approve screen and X button',
+          mediaFit: 'contain',
+          mediaFitMobile: 'cover',
+          objectPosition: 'center center',
+          objectPositionMobile: 'center center',
+          accent: '#8b7ff0',
+          scroll: 1.6,
+          linger: 0.35,
+          eyebrow: 'Printable case / legacy K016-P',
+          title: 'Your approvals, in your pocket.',
+          body: 'Xiaodex is the physical companion for the Codex Mac app: approve requests, speak commands and stay in control. A 27 × 16 × 72 mm charcoal shell wraps a real M5StickC Plus with its live screen.',
+          tags: ['27.0 × 16.0 × 72.0 mm', 'CAD-validated prototype'],
+        },
+        {
+          id: 'display',
+          label: 'Display',
+          still: 'assets/display.jpg',
+          clip: 'assets/vid/display.mp4',
+          alt: 'Close view of the xiaodex screen showing the connected status and approve ring',
+          mediaFit: 'cover',
+          mediaFitMobile: 'cover',
+          objectPosition: 'center center',
+          objectPositionMobile: 'center center',
+          accent: '#3ecf6e',
+          eyebrow: 'Status & connection display',
+          title: 'One glance says it all.',
+          body: 'The real M5 display shows the xiaodex UI through a 19 × 28.8 mm window: connection dot, live status and the approve ring. No mock screen — the actual LCD stays visible behind recessed glass.',
+          tags: ['19 × 28.8 mm window', 'Live M5 display'],
+        },
+        {
+          id: 'controls',
+          label: 'Controls',
+          still: 'assets/controls.jpg',
+          clip: 'assets/vid/controls.mp4',
+          alt: 'Right flank of the Xiaodex case with the purple side button and grip ribs, X button pressing',
+          mediaFit: 'cover',
+          mediaFitMobile: 'cover',
+          objectPosition: 'center center',
+          objectPositionMobile: 'center center',
+          scroll: 1.5,
+          linger: 0.4,
+          accent: '#8b7ff0',
+          eyebrow: 'Push to approve, hold to talk',
+          title: 'Press X to approve.',
+          body: 'The X-embossed cap drives the M5’s front button at its modelled 0.35 mm travel. The purple flank button records voice commands and the low-profile power cap stays reachable — all through printed parts.',
+          tags: ['0.35 mm true travel', 'Purple voice button'],
+        },
+        {
+          id: 'inside',
+          label: 'Inside',
+          still: 'assets/inside.jpg',
+          clip: 'assets/vid/inside.mp4',
+          alt: 'Exploded view showing the rear cover with speaker grid, the M5StickC Plus and the front tray',
+          mediaFit: 'cover',
+          mediaFitMobile: 'cover',
+          objectPosition: 'center center',
+          objectPositionMobile: 'center center',
+          scroll: 1.7,
+          linger: 0.45,
+          accent: '#8b7ff0',
+          eyebrow: 'Device fit',
+          title: 'Two shells around the stick.',
+          body: 'The pinned 24 × 48 × 13.5 mm reference seats at 0.30 mm per side between a front tray and a rear cover on four alignment pegs. The mic grid, debossed wordmark and USB-C opening all stay functional.',
+          tags: ['Pinned official reference', 'USB-C stays open'],
+        },
+        {
+          id: 'finale',
+          label: 'Print kit',
+          still: 'assets/finale.jpg',
+          clip: 'assets/vid/finale.mp4',
+          alt: 'Assembled Xiaodex case settling into a three-quarter hero view',
+          mediaFit: 'contain',
+          mediaFitMobile: 'contain',
+          objectPosition: 'center center',
+          objectPositionMobile: 'center center',
+          scroll: 1.6,
+          linger: 0.3,
+          accent: '#8b7ff0',
+          eyebrow: 'Prototype print kit',
+          title: 'Print your companion.',
+          body: 'Six watertight parts: tray, cover, X button, purple side button, power cap and a grille backer. Print charcoal plus purple, drop the stick in, and physically verify button feel and peg fit before daily use.',
+          tags: ['6 watertight parts', 'Charcoal + purple filament'],
+          cta: {
+            primary: {
+              label: 'CAD & build notes',
+              href: '../../cad/m5stickc-plus-xiaodex/README.md',
+            },
+            secondary: {
+              label: 'Companion overview',
+              href: '../',
+            },
+          },
+        },
+      ],
+      // Five contiguous cuts from one Blender camera flight; clip order is intentional.
+      connectors: [],
+    });
+  </script>
+</body>
+</html>

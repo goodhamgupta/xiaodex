@@ -1,0 +1,13 @@
+Use case: production sprite sheet
+Asset type: M5StickC Plus pixel-art animation source
+Character: Codex Spark, an original rounded terminal-capsule robot with a
+white shell, black face panel, antenna, feet, and expressive cyan eyes.
+
+Layout: exactly 4 equal square columns by 7 equal square rows, with four subtle
+frames per state. Rows are sleep, idle, busy, attention, celebrate, dizzy, and
+heart. Keep the complete character centered at one consistent scale with at
+least 8% clear margin in every cell. Effects must stay inside their cell.
+
+Palette: electric lime #D8FF00 primary; cyan #2EE6E6 secondary; off-white shell;
+black face and outline. Use crisp flat pixel colors, hard edges, no gradients,
+no labels, no watermark, and a uniform transparency checkerboard background.

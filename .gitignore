@@ -1,0 +1,11 @@
+node_modules/
+.cachebro/
+.venv-cad/
+__pycache__/
+.DS_Store
+.env
+*.log
+firmware/m5stickc-plus/src/codex_buddy_config.h
+firmware/m5stickc-plus/.pio/
+artifacts/device/
+*.blend1

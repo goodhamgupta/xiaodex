@@ -1,0 +1,21 @@
+{
+  "name": "codex-buddy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "codex-buddy": "./bin/codex-buddy.js"
+  },
+  "scripts": {
+    "start": "node ./bin/codex-buddy.js",
+    "configure:bridge-token": "node ./firmware/m5stickc-plus/tools/ensure_bridge_token.mjs",
+    "simulate-device": "node ./examples/simulated-device.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "ws": "^8.21.1"
+  }
+}

@@ -1,0 +1,7 @@
+.pio/
+__pycache__/
+*.pyc
+data/*.wad
+data/*.WAD
+data/*.zip
+data/.wad-build-*/

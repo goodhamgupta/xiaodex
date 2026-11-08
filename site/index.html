@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1c1f20" />
+  <meta
+    name="description"
+    content="Explore the Xiaodex companion enclosure: a printable M5StickC Plus case for Codex voice commands and approvals."
+  />
+  <title>Xiaodex — M5StickC Plus companion</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2316181a'/%3E%3Cpath d='M20 18l10 10 10-10 6 6-10 10 10 10-6 6-10-10-10 10-6-6 10-10-10-10z' fill='%238b7ff0'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --slate: #1c1f20;
+      --slate-soft: #25292a;
+      --sand: #eee8df;
+      --lime: #d4f655;
+      --mint: #74ebb9;
+      --violet: #8b7ff0;
+      --ice: #beeae5;
+      --line: rgba(238, 232, 223, 0.18);
+      --muted: rgba(238, 232, 223, 0.66);
+      --display: "Space Grotesk", "Arial Narrow", Arial, sans-serif;
+      --body: "Rethink Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--slate);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 82% 8%, rgba(0, 212, 200, 0.08), transparent 29rem),
+        radial-gradient(circle at 13% 40%, rgba(212, 246, 85, 0.045), transparent 31rem),
+        var(--slate);
+      color: var(--sand);
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 20;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--sand);
+      color: var(--slate);
+      font-weight: 700;
+      transform: translateY(-180%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      width: min(100% - 48px, 1500px);
+      height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .identity,
+    .header-status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .identity-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(238, 232, 223, 0.7);
+      border-radius: 50%;
+      font-size: 0.68rem;
+      letter-spacing: 0;
+    }
+
+    .header-status {
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--mint);
+      box-shadow: 0 0 0 5px rgba(116, 235, 185, 0.11);
+    }
+
+    main {
+      width: min(100% - 48px, 1500px);
+      margin: 0 auto;
+      padding: clamp(56px, 8vw, 116px) 0 52px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+      gap: clamp(40px, 8vw, 130px);
+      align-items: end;
+      margin-bottom: clamp(54px, 7vw, 94px);
+    }
+
+    .kicker {
+      margin: 0 0 20px;
+      color: var(--lime);
+      font-family: var(--display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(3.4rem, 8vw, 8.25rem);
+      font-weight: 500;
+      letter-spacing: -0.075em;
+      line-height: 0.86;
+      text-wrap: balance;
+    }
+
+    .intro-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.35vw, 1.18rem);
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    .intro-copy strong {
+      color: var(--sand);
+      font-weight: 600;
+    }
+
+    .collection-label {
+      margin: 0 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--muted);
+      font-family: var(--display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .collection-label::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .cases {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .case {
+      --accent: var(--sand);
+      position: relative;
+      min-height: clamp(510px, 59vw, 760px);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: #071521;
+      isolation: isolate;
+      text-decoration: none;
+    }
+
+    .case--xiaodex {
+      --accent: var(--violet);
+      grid-column: 1 / -1;
+      min-height: clamp(430px, 34vw, 560px);
+      background: #151719;
+    }
+
+    .case--xiaodex .case-media img {
+      object-position: 50% 38%;
+    }
+
+    .case-media,
+    .case-media::after,
+    .case-media img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .case-media {
+      z-index: -2;
+      margin: 0;
+    }
+
+    .case-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 750ms cubic-bezier(0.2, 0.75, 0.15, 1), filter 750ms ease;
+    }
+
+    .case-media::after {
+      content: "";
+      background:
+        linear-gradient(180deg, rgba(3, 11, 17, 0.22) 0%, transparent 42%),
+        linear-gradient(0deg, rgba(3, 9, 13, 0.95) 0%, rgba(3, 9, 13, 0.56) 25%, transparent 58%);
+    }
+
+    .case::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border: 2px solid transparent;
+      transition: border-color 250ms ease;
+      pointer-events: none;
+    }
+
+    .case-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 24px;
+      color: rgba(255, 255, 255, 0.78);
+      font-family: var(--display);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .case-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .case-number::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .case-content {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 28px 28px 26px;
+    }
+
+    .case-type {
+      margin: 0 0 7px;
+      color: var(--accent);
+      font-family: var(--display);
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .case h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 5vw, 5.6rem);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 0.95;
+    }
+
+    .case-promise {
+      max-width: 34rem;
+      margin: 13px 0 26px;
+      color: rgba(255, 255, 255, 0.77);
+      font-size: 0.98rem;
+      line-height: 1.45;
+    }
+
+    .case-footer {
+      padding-top: 18px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .case-facts {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 18px;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: var(--display);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .case-cta {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--accent);
+      font-family: var(--display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .case-cta::after {
+      content: "\2197";
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-size: 0.95rem;
+      transition: color 250ms ease, background-color 250ms ease, transform 250ms ease;
+    }
+
+    .case:hover .case-media img,
+    .case:focus-visible .case-media img {
+      transform: scale(1.025);
+      filter: saturate(1.06) contrast(1.03);
+    }
+
+    .case:hover::after,
+    .case:focus-visible::after {
+      border-color: var(--accent);
+    }
+
+    .case:hover .case-cta::after,
+    .case:focus-visible .case-cta::after {
+      background: var(--accent);
+      color: #101314;
+      transform: rotate(45deg);
+    }
+
+    .case:focus-visible {
+      outline: 3px solid var(--sand);
+      outline-offset: 5px;
+    }
+
+    .page-note {
+      margin: 24px 0 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      color: rgba(238, 232, 223, 0.48);
+      font-size: 0.75rem;
+      line-height: 1.45;
+    }
+
+    .page-note span:last-child {
+      text-align: right;
+    }
+
+    @media (max-width: 960px) {
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .intro-copy {
+        max-width: 42rem;
+      }
+
+      .cases {
+        grid-template-columns: 1fr;
+      }
+
+      .case {
+        min-height: min(720px, 88vw);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .site-header,
+      main {
+        width: min(100% - 28px, 1500px);
+      }
+
+      .site-header {
+        height: 66px;
+      }
+
+      .identity-text,
+      .header-status span:last-child {
+        display: none;
+      }
+
+      main {
+        padding-top: 48px;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 18vw, 5.25rem);
+      }
+
+      .case {
+        min-height: 620px;
+      }
+
+      .case-media img {
+        object-position: center 35%;
+      }
+
+      .case-content {
+        padding: 24px 20px 20px;
+      }
+
+      .case-topline {
+        padding: 18px 19px;
+      }
+
+      .case h2 {
+        font-size: clamp(3.1rem, 15vw, 4.4rem);
+      }
+
+      .case-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .case-cta {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .page-note {
+        flex-direction: column;
+      }
+
+      .page-note span:last-child {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .case-media img,
+      .case-cta::after {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#cases">Skip to the companion case</a>
+
+  <header class="site-header">
+    <div class="identity" aria-label="Xiaodex">
+      <span class="identity-mark" aria-hidden="true">X</span>
+      <span class="identity-text">Xiaodex / Companion case</span>
+    </div>
+    <div class="header-status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Blender-validated geometry</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="kicker">M5StickC Plus / Voice &amp; approvals</p>
+        <h1 id="page-title">Your Codex companion.</h1>
+      </div>
+      <p class="intro-copy">
+        A printable companion enclosure around the legacy
+        <strong>24 × 48 × 13.5 mm M5StickC Plus</strong>. Explore its geometry,
+        controls and assembly through a scroll-driven product tour.
+      </p>
+    </section>
+
+    <p class="collection-label" id="cases">Explore the companion case</p>
+
+    <section class="cases" aria-label="Xiaodex companion enclosure">
+      <a class="case case--xiaodex" href="./xiaodex/" aria-label="Explore the Xiaodex companion case">
+        <figure class="case-media">
+          <img
+            src="./xiaodex/assets/mark.jpg"
+            alt="Front view of the charcoal Xiaodex companion case with its approve screen lit"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+        </figure>
+        <div class="case-topline">
+          <span class="case-number">Companion case</span>
+          <span>Xiaodex</span>
+        </div>
+        <div class="case-content">
+          <p class="case-type">Voice + approval companion</p>
+          <h2>XIAODEX</h2>
+          <p class="case-promise">
+            The Codex companion made physical: approve requests with the X button, speak commands, and keep the live screen in view.
+          </p>
+          <div class="case-footer">
+            <p class="case-facts">
+              <span>27 × 16 × 72 mm</span>
+              <span>6 watertight STLs</span>
+            </p>
+            <span class="case-cta">Enter the build</span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <p class="page-note">
+      <span>Generated from the current CAD exports and checked in Blender.</span>
+      <span>Prototype geometry — physical fit, actuation and cycle testing remain required before production.</span>
+    </p>
+  </main>
+</body>
+</html>

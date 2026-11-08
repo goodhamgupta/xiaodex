@@ -1,0 +1,11 @@
+Create a compact pixel-art color-direction board for the existing Codex Spark,
+Codex Cat, and Codex Axolotl M5StickC Plus pets. Show each character on pure
+black with a distinct RGB332-safe identity and matching swatches:
+
+- Spark: electric lime #D8FF00 primary, cyan #2EE6E6 secondary
+- Cat: warm amber #FFA62B primary, cyan #2EE6E6 secondary
+- Axolotl: soft pink #FF8FB8 primary, cyan #2EE6E6 secondary
+- Shared: off-white #F8F8F8, dim text #B6B6B6, black #000000
+
+Use crisp flat pixel colors, no gradients, and make the features readable at
+the device's effective 48x48 peek size.

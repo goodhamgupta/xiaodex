@@ -1,0 +1,25 @@
+{
+  "name": "codex-axolotl",
+  "generator": "Codex image generation / Imagen",
+  "source": "assets/imagen/codex-axolotl/sprite-sheet.png",
+  "cell": {
+    "width": 96,
+    "height": 96
+  },
+  "colors": {
+    "body": "#FF8FB8",
+    "bg": "#000000",
+    "text": "#F8F8F8",
+    "textDim": "#B6B6B6",
+    "ink": "#000000"
+  },
+  "states": {
+    "sleep": "sleep.gif",
+    "idle": "idle.gif",
+    "busy": "busy.gif",
+    "attention": "attention.gif",
+    "celebrate": "celebrate.gif",
+    "dizzy": "dizzy.gif",
+    "heart": "heart.gif"
+  }
+}

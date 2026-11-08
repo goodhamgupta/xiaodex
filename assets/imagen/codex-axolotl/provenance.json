@@ -1,0 +1,16 @@
+{
+  "name": "codex-axolotl",
+  "generator": "Codex built-in image generation",
+  "generated_at": "2026-07-28",
+  "generation_session": "019f8213-06b8-71f1-b185-ec212bf89314",
+  "workspace_path": "assets/imagen/codex-axolotl/sprite-sheet.png",
+  "palette": {
+    "primary": "#FF8FB8",
+    "secondary": "#2EE6E6"
+  },
+  "layout": {
+    "columns": 4,
+    "rows": ["sleep", "idle", "busy", "attention", "celebrate", "dizzy", "heart"]
+  },
+  "notes": "Regenerated after physical RGB332 framebuffer review."
+}
